@@ -1,0 +1,171 @@
+
+'models
+@startuml
+Model --> xxx
+Model --> Log
+Model --> Contact
+Model --> Category
+Model --> Reminder
+
+MainDb <- xxxDao
+MainDb <- LogDao
+MainDb <- ContactDao
+MainDb <- ReminderDao
+MainDb <- CategoryDao
+
+
+xxx --* xxxDao
+xxxDao --* xxxViewModel
+xxxViewModel --* xxxAdapter
+xxxAdapter --* xxxViewHolder
+
+Log --* LogDao
+LogDao --* LogViewModel
+LogViewModel --* LogAdapter
+LogAdapter --* LogViewHolder
+
+Contact --* ContactDao
+ContactDao --* ContactViewModel
+ContactViewModel --* ContactAdapter
+ContactAdapter --* ContactViewHolder
+
+Category --* CategoryDao
+CategoryDao --* CategoryViewModel
+CategoryViewModel --* CategoryAdapter
+CategoryAdapter --* CategoryViewHolder
+
+Reminder --* ReminderDao
+ReminderDao --* ReminderViewModel
+ReminderViewModel --* ReminderAdapter
+ReminderAdapter --* ReminderViewHolder
+
+Alarm -> MyService
+
+
+
+@enduml
+
+
+'صفحه نمایش یادآور قدیمی
+
+@startuml
+salt
+{
+{
+<img:"C:\Users\JefTab\Desktop\wireframe\image.png">  |
+[:] |
+{
+[حذف]
+[ویرایش]
+ [<b><&star>]
+}
+ }
+{
+<b>   خاله ها </b> |  (رنگ آن بر اساس رنگ انتخابی است)
+}
+--
+در اینجا باید گفت واقعا تماس با  این گروه بسیار مهم
+و چالشی است و عدم توجه به آن می توان منشاء ......
+.....
+...
+--
+:گروه <b> خاله ها
+:اولویت ***بالا***
+یاد آور هر دو هفته, ساعت 22:00
+مدت یاد آوری: از ساعت 21:00 تا 23:00
+یادآوری بعدی : 1399/03/01, 12:00
+{#
+فقط این روز ها |ش|ی|د|س|چ|پ|ج
+}
+[اطلاعات تماس]
+
+}
+@enduml
+
+
+'صفحه نمایش یادآور گروهی
+@startuml
+salt
+{
+{
+<img:"C:\Users\JefTab\Desktop\wireframe\image.png">  |
+..{+
+خاله حلیمه
+خاله زهرا
+خاله صدیقه
+خاله معصومه
+خاله مریم
+خاله صغری
+}
+ }
+{
+<b>   خاله ها </b> |  (رنگ آن بر اساس رنگ انتخابی است)
+}
+
+{
+[حذف] |
+[ویرایش] |
+ [<b><&star>]
+}
+--
+در اینجا باید گفت واقعا تماس با  این گروه بسیار مهم
+و چالشی است و عدم توجه به آن می توان منشاء ......
+.....
+...
+--
+:گروه <b> خاله ها
+:اولویت ***بالا***
+یاد آور هر دو هفته, ساعت 22:00
+مدت یاد آوری: از ساعت 21:00 تا 23:00
+یادآوری بعدی : 1399/03/01, 12:00
+{#
+فقط این روز ها |ش|ی|د|س|چ|پ|ج
+}
+[اطلاعات تماس]
+
+}
+@enduml
+
+
+
+'صفحه نمایش یادآور تکی
+@startuml
+salt
+{
+{
+<img:"C:\Users\JefTab\Desktop\wireframe\image.png">  |
+{
+...
+[تصویر]
+ خاله زهرا
+...
+}
+ }
+{
+<b>   خاله ها </b> |  (رنگ آن بر اساس رنگ انتخابی است)
+}
+
+{
+[حذف] |
+[ویرایش] |
+ [<b><&star>]
+}
+--
+در اینجا باید گفت واقعا تماس با  این گروه بسیار مهم
+و چالشی است و عدم توجه به آن می توان منشاء ......
+.....
+...
+--
+:گروه <b> خاله ها
+:اولویت ***بالا***
+یاد آور هر دو هفته, ساعت 22:00
+مدت یاد آوری: از ساعت 21:00 تا 23:00
+یادآوری بعدی : 1399/03/01, 12:00
+{#
+فقط این روز ها |ش|ی|د|س|چ|پ|ج
+}
+[اطلاعات تماس]
+
+}
+@enduml
+

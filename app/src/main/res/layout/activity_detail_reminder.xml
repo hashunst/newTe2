@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailReminderActivity">
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/clist"
+            android:layout_width="150dp"
+            android:layout_height="200dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:text="عنوان"
+            android:textColor="@color/cardview_dark_background"
+            android:textSize="22sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/clist" />
+
+        <TextView
+            android:id="@+id/tv_des"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="24dp"
+            android:text="توضیحات"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+        <TextView
+            android:id="@+id/show_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="44dp"
+            android:text="دسته"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_des" />
+
+        <TextView
+            android:id="@+id/tv_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="36dp"
+            android:text="دسته"
+            android:textColor="#D2000000"
+            app:layout_constraintBottom_toBottomOf="@+id/show_category"
+            app:layout_constraintStart_toEndOf="@+id/show_category"
+            app:layout_constraintTop_toTopOf="@+id/show_category"
+            app:layout_constraintVertical_bias="0.0" />
+
+
+        <TextView
+            android:id="@+id/show_olaviat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="44dp"
+            android:text="اولویت"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_category" />
+
+        <TextView
+            android:id="@+id/tv_olaviat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="36dp"
+            android:text="اولویت"
+            android:textColor="#D2000000"
+            app:layout_constraintBottom_toBottomOf="@+id/show_olaviat"
+            app:layout_constraintStart_toEndOf="@+id/show_olaviat"
+            app:layout_constraintTop_toTopOf="@+id/show_olaviat"
+            app:layout_constraintVertical_bias="0.0" />
+
+
+        <TextView
+            android:id="@+id/show_reminder_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="44dp"
+            android:text="نوع یادآور"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/show_olaviat" />
+
+        <TextView
+            android:id="@+id/tv_reminder_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="36dp"
+            android:text="نوع یادآور"
+            android:textColor="#D2000000"
+            app:layout_constraintBottom_toBottomOf="@+id/show_reminder_type"
+            app:layout_constraintStart_toEndOf="@+id/show_reminder_type"
+            app:layout_constraintTop_toTopOf="@+id/show_reminder_type"
+            app:layout_constraintVertical_bias="0.0" />
+
+
+        <TextView
+            android:id="@+id/show_notifi_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="44dp"
+            android:text="مدت نمایش یادآوری"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/show_reminder_type" />
+
+        <TextView
+            android:id="@+id/tv_notifi_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="36dp"
+            android:text="مدت نمایش یادآوری"
+            android:textColor="#D2000000"
+            app:layout_constraintBottom_toBottomOf="@+id/show_notifi_time"
+            app:layout_constraintStart_toEndOf="@+id/show_notifi_time"
+            app:layout_constraintTop_toTopOf="@+id/show_notifi_time"
+            app:layout_constraintVertical_bias="0.0" />
+
+
+        <TextView
+            android:id="@+id/show_next_remind"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="44dp"
+            android:text="یاد آوری بعدی"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/show_notifi_time" />
+
+        <TextView
+            android:id="@+id/tv_next_remind"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="36dp"
+            android:text="یاد آوری بعدی"
+            android:textColor="#D2000000"
+            app:layout_constraintBottom_toBottomOf="@+id/show_next_remind"
+            app:layout_constraintStart_toEndOf="@+id/show_next_remind"
+            app:layout_constraintTop_toTopOf="@+id/show_next_remind"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/show_next_remind"
+            tools:layout_editor_absoluteX="0dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="روزهای انتخابی" />
+
+            <androidx.appcompat.widget.AppCompatToggleButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textOff="ش"
+                android:textOn="ش" />
+
+            <androidx.appcompat.widget.AppCompatToggleButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textOff="ی"
+                android:textOn="ی" />
+
+            <androidx.appcompat.widget.AppCompatToggleButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textOff="د"
+                android:textOn="د" />
+
+            <androidx.appcompat.widget.AppCompatToggleButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textOff="س"
+                android:textOn="س" />
+
+            <androidx.appcompat.widget.AppCompatToggleButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textOff="چ"
+                android:textOn="چ" />
+
+            <androidx.appcompat.widget.AppCompatToggleButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textOff="پ"
+                android:textOn="پ" />
+
+            <androidx.appcompat.widget.AppCompatToggleButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textOff="ج"
+                android:textOn="ج" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_show_contact_infos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="نمایش اطلاعات تماس مخاطبین"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
